@@ -1,0 +1,19 @@
+app/
+  views/
+    application.html.erb      # Default application layout
+    books/
+      index.html.erb          # The index page for books
+    mailer/
+      some_mailer_template.html.erb   # Default mailer views (if you have them)
+
+      <h1>Available Books</h1>
+
+      <ul>
+        <% @books.each do |book| %>
+          <li>
+            <%= book.title %> by <%= book.author %> 
+            <%= link_to 'Details', book_path(book) %>
+          </li>
+        <% end %>
+      </ul>
+      

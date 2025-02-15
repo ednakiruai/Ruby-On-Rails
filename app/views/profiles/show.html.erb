@@ -1,0 +1,14 @@
+<h1>Your Borrowed Books</h1>
+
+<% if @borrowings.empty? %>
+  <p>You haven't borrowed any books yet.</p>
+<% else %>
+  <ul>
+    <% @borrowings.each do |borrowing| %>
+      <li>
+        <%= borrowing.book.title %> - Due Date: <%= borrowing.due_date.strftime("%B %d, %Y") %>
+        <%= button_to 'Return', return_book_book_path(borrowing.book), method: :post, class: 'btn btn-danger' %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
