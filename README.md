@@ -10,25 +10,25 @@ Track book lending history.
 Return books and mark them as returned.
 View borrowing history of a specific borrower.
 Prerequisites
-Ensure you have the following installed:
 
+Ensure you have the following installed:
 Ruby 3.2.2 (or later)
 Rails 8
 SQLite (default database for Rails)
 Installation
-Clone this repository:
 
+Clone this repository:
 git clone https://github.com/ednakiruai/Ruby-On-Rails
 cd book_lending_library
+
 Install dependencies:
-
 bundle install
-Set up the database:
 
+Set up the database:
 rails db:create db:migrate
 Running the Application
-Start the Rails server:
 
+Start the Rails server:
 rails server
 Then visit http://localhost:3000 in your browser.
 
